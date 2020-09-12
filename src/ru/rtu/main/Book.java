@@ -1,10 +1,10 @@
 package ru.rtu.main;
 
 public class Book {
-    public String name;
-    public String author;
-    public int publication_year;
-    public int pop_level; //from zero to ten
+    private String name;
+    private String author;
+    private int publication_year;
+    private int pop_level; //from zero to ten
     public Book(String name, String author, int publication_year, int pop_level) {
         this.name = name;
         this.author = author;

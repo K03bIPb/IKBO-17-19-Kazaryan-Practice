@@ -1,9 +1,9 @@
 package ru.rtu.main;
 
 public class Human {
-    public Head head;
-    public Leg leg;
-    public Hand hand;
+    private Head head;
+    private Leg leg;
+    private Hand hand;
     public Human(Head head, Leg leg, Hand hand){
         this.head = head;
         this.leg = leg;
