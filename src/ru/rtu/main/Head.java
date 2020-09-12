@@ -19,4 +19,12 @@ public class Head {
     public int getHeadRadius(){
         return head_radius;
     }
+
+    @Override
+    public String toString() {
+        return "Head{" +
+                "head_weight=" + head_weight +
+                ", head_radius=" + head_radius +
+                '}';
+    }
 }
