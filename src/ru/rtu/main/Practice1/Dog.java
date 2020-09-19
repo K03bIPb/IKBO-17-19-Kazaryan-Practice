@@ -1,4 +1,4 @@
-package ru.rtu.main;
+package ru.rtu.main.Practice1;
 
 public class Dog {
     private int age;

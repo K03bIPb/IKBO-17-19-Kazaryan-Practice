@@ -1,10 +1,10 @@
-package ru.rtu.main;
+package ru.rtu.main.Practice2;
 
 public class Author {
     private String name;
     private String E_mail;
     private char gender;
-    void Author(String name, String E_mail, char gender){
+    public Author(String name, String E_mail, char gender){
         this.name = name;
         this.E_mail = E_mail;
         this.gender = gender;

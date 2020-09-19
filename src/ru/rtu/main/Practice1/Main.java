@@ -1,4 +1,4 @@
-package ru.rtu.main;
+package ru.rtu.main.Practice1;
 import java.util.Random;
 
 public class Main {
