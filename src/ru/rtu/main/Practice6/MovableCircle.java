@@ -1,13 +1,16 @@
 package ru.rtu.main.Practice6;
-import ru.rtu.main.Practice5.Rectangle;
+import ru.rtu.main.Practice5.Circle;
 
 
 
-class MovableRectangle extends Rectangle implements Movable {
+class MovableCircle extends Circle implements Movable {
     private Point center;
-    public MovableRectangle(boolean isFilled, String color, double width, double height) {
-        super(isFilled, color, width, height);
+
+    public MovableCircle(boolean isFilled, String color, double radius, Point center) {
+        super(isFilled, color, radius);
+        this.center = center;
     }
+
 
     public Point getCenter() {
         return center;

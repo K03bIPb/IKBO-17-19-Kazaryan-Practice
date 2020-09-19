@@ -1,7 +1,7 @@
 package ru.rtu.main.Practice1;
 import java.util.Random;
 
-public class Main {
+public class main1 {
     //task 1
     static int all_cycles() {
         int[] array = {1, 2, 3, 4, 5};
