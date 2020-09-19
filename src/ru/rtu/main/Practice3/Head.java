@@ -1,4 +1,4 @@
-package ru.rtu.main;
+package ru.rtu.main.Practice3;
 
 public class Head {
     private int head_weight;

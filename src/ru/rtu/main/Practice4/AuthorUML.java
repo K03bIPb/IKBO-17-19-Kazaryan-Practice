@@ -1,4 +1,4 @@
-package ru.rtu.main;
+package ru.rtu.main.Practice4;
 
 public class AuthorUML {
     private String name;

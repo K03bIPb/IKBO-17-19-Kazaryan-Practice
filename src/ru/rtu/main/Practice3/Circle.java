@@ -1,4 +1,4 @@
-package ru.rtu.main;
+package ru.rtu.main.Practice3;
 
 public class Circle {
     double pi = Math.PI;

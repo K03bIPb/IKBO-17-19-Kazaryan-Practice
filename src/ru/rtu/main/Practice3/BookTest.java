@@ -1,4 +1,4 @@
-package ru.rtu.main;
+package ru.rtu.main.Practice3;
 
 public class BookTest {
     public static void main(String[] args) {
