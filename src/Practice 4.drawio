@@ -1,0 +1,19 @@
+<mxfile host="app.diagrams.net" modified="2020-09-12T13:51:06.649Z" agent="5.0 (Windows)" etag="3NaP7CB9j8SThsaFRuoz" version="13.6.10" type="github">
+  <diagram id="Lyc-Ewsa-9I7V2ZPc48x" name="Page-1">
+    <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4-c7136IYLpF2M4VSE7P-1" value="&lt;div align=&quot;center&quot;&gt;Circle&lt;/div&gt;&lt;div&gt;-radius:double&lt;/div&gt;&lt;div&gt;---------------------------------------------------&lt;/div&gt;&lt;div&gt;+Circle(radius:double)&lt;/div&gt;&lt;div&gt;+getRadius():double&lt;/div&gt;&lt;div&gt;+setRadius(radius:double):void&lt;/div&gt;&lt;div&gt;+toString():String&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4-c7136IYLpF2M4VSE7P-2" value="&lt;div align=&quot;center&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Book&lt;/div&gt;&lt;div&gt;-name:String&lt;/div&gt;&lt;div&gt;-author:String&lt;/div&gt;&lt;div&gt;-publication_year:int&lt;/div&gt;&lt;div&gt;-pop_level:int&lt;br&gt;&lt;/div&gt;&lt;div&gt;---------------------------------------------------&lt;/div&gt;&lt;div&gt;+Book(name:String, author:String, publication_year:int, pop_level:int)&lt;br&gt;&lt;/div&gt;&lt;div&gt;+setName(name:String)&lt;/div&gt;&lt;div&gt;+setAuthor(Author:String)&lt;/div&gt;&lt;div&gt;+setPublicationYear(publication_year:int)&lt;/div&gt;&lt;div&gt;+setPopLevel(pop_level:int)&lt;/div&gt;&lt;div&gt;+getName()&lt;/div&gt;&lt;div&gt;+getAuthor()&lt;/div&gt;&lt;div&gt;+getPublicationYear()&lt;/div&gt;&lt;div&gt;+getPopLevel()&lt;br&gt;&lt;/div&gt;&lt;div&gt;+toString():String&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="290" y="10" width="410" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="4-c7136IYLpF2M4VSE7P-3" value="&lt;div align=&quot;center&quot;&gt;Human&lt;/div&gt;&lt;div&gt;+head:Head&lt;/div&gt;&lt;div&gt;+leg:Leg&lt;/div&gt;&lt;div&gt;+hand:Hand&lt;br&gt;&lt;/div&gt;&lt;div&gt;---------------------------------------------------&lt;/div&gt;&lt;div&gt;+Human(head:Head, leg:Leg, hand:Hand)&lt;/div&gt;&lt;div&gt;+toString():String&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry y="130" width="270" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
