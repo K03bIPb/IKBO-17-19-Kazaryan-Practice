@@ -1,37 +1,52 @@
 package ru.rtu.main.Practice7_8;
-import java.util.Arrays;
-import java.util.Random;
 
 public class Company {
     private int last_empty_place = 0;
-    private int emp_max = 100;
-    private double full_income = 0; //0 by default need to calc
-    Employee[] employees = new Employee[emp_max];
-    public void hire(Employee employee_to_hire){
+    private final int emp_max = 200;
+    private final double baseSalary;
+    private double fullIncome = 0; //0 by default need to calc
+    private final Employee[] employees = new Employee[emp_max];
+
+    public Company(double baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+    public double getBaseSalary() {
+        return baseSalary;
+    }
+    public void calcIncome() {
+        for (int i = 0; i < last_empty_place; i++)
+            fullIncome = fullIncome + employees[i].getIncome();
+    }
+    public void hire(Employee employee_to_hire) {
         employees[last_empty_place] = employee_to_hire;
         last_empty_place++;
     }
-    public void calcIncome(){
-        for (int i=0;i<last_empty_place;i++)
-            if (employees[i].getEmpPos().toString() == "Manager"){
-                employees[i].get
-            }
-    }
-
-
-    public void hireAll(Employee[] employees_to_hire){
+    public void hireAll(Employee[] employees_to_hire) {
         if (employees_to_hire.length + last_empty_place < emp_max) {
-            System.out.println("employee firelist does not fit emp list! Emp list not extended!");
+            int a = last_empty_place;
+            for (int i = a; i < employees_to_hire.length + a; i++) {
+                employees[i] = employees_to_hire[i-a];
+                last_empty_place++;
+            }
         }
         else {
-            for (int i = 0; i < employees_to_hire.length; i++)
-                employees[last_empty_place] = employees_to_hire[i];
-            }
+            System.out.println("employee fire list does not fit emp list — emp list not extended!");
+        }
     }
-    public void fire(int emp_to_fire){
+    public void fire(int emp_to_fire) {
         employees[emp_to_fire] = null;
     }
-    public double getIncome(){
-        return ;
+    public Employee[] getEmployeeList(){
+        return employees;
     }
+    public double getFullIncome(){
+        return fullIncome;
+    }
+    public String getEmployeePosition(int emp_place) {
+        return employees[emp_place].getPosition();
+    }
+    public double getEmployeeSalary(int emp_place, double fullIncome, double baseSalary){
+        return employees[emp_place].getSalary(fullIncome, baseSalary);
+    }
+
 }

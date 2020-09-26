@@ -1,28 +1,13 @@
 package ru.rtu.main.Practice7_8;
 
-public class Employee {
+abstract public class Employee {
     private String surname;
     private String name;
-    private double salary;
-    private EmployeePosition emp_pos;
-    private double income = 0; // 0 by default only managers have income
+    private EmployeePosition positions;
 
-    public Employee(String surname, String name, double salary, EmployeePosition emp_pos) {
+    public Employee(String name, String surname) {
         this.surname = surname;
         this.name = name;
-        this.salary = salary;
-        this.emp_pos = emp_pos;
-    }
-    void calcIncome(){
-
-    }
-
-    public EmployeePosition getEmpPos() {
-        return emp_pos;
-    }
-
-    public void setEmpPos(EmployeePosition emp_pos) {
-        this.emp_pos = emp_pos;
     }
 
     public String getSurname() {
@@ -41,12 +26,18 @@ public class Employee {
         this.name = name;
     }
 
-    public double getSalary() {
-        return salary;
+    public double getSalary(double full_income, double baseSalary){
+        return positions.calcSalary(full_income, baseSalary);
+    }
+    public String getPosition(){
+        return positions.getJobTitle();
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
+    abstract public double getIncome();
 
+    @Override
+    public String toString() {
+        return  "\n" + name + " " + surname;
+    }
 }
+
