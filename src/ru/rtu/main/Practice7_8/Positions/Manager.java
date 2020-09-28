@@ -6,23 +6,24 @@ import java.util.Random;
 
 public class Manager extends Employee implements EmployeePosition {
     private final Random rand = new Random();
-    private final double income = rand.nextInt(140000) + 115000;
+    private final int income = rand.nextInt(15000) + 115000;
 
     public Manager(String name, String surname) {
         super(name, surname);
     }
 
-    public double getIncome() {
+    public int getIncome() {
         return income;
     }
 
+
     @Override
     public String getJobTitle() {
-        return "Manager";
+        return "manager";
     }
 
     @Override
-    public double calcSalary(double full_income, double baseSalary) {
+    public double calcSalary(double fullIncome, double baseSalary) {
         return baseSalary+0.05*income;
     }
 

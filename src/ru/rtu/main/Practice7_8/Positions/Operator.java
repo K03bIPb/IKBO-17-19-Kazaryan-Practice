@@ -9,17 +9,18 @@ public class Operator extends Employee implements EmployeePosition {
         super(name, surname);
     }
     @Override
-    public double getIncome() {
+    public int getIncome() {
         return 0;
     }
+
+
     @Override
     public String getJobTitle() {
-        return "Operator";
+        return "operator";
     }
 
     @Override
-    public double calcSalary(double baseSalary, double fullIncome) {
+    public double calcSalary(double fullIncome, double baseSalary) {
         return baseSalary;
     }
-
 }

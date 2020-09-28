@@ -1,9 +1,8 @@
 package ru.rtu.main.Practice7_8;
 
-abstract public class Employee {
+abstract public class Employee implements EmployeePosition {
     private String surname;
     private String name;
-    private EmployeePosition positions;
 
     public Employee(String name, String surname) {
         this.surname = surname;
@@ -26,18 +25,12 @@ abstract public class Employee {
         this.name = name;
     }
 
-    public double getSalary(double full_income, double baseSalary){
-        return positions.calcSalary(full_income, baseSalary);
-    }
-    public String getPosition(){
-        return positions.getJobTitle();
-    }
+    abstract public int getIncome();
 
-    abstract public double getIncome();
 
     @Override
     public String toString() {
-        return  "\n" + name + " " + surname;
+        return  "[" + name + " " + surname + " " + "(" + getJobTitle() + ")" + "]" ;
     }
 }
 
