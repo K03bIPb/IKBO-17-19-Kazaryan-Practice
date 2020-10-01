@@ -3,6 +3,12 @@ package ru.rtu.main.Practice7_8;
 abstract public class Employee implements EmployeePosition {
     private String surname;
     private String name;
+    private int seed = (int) (Math.random()%15000 +115000);
+
+
+    public int getSeed() {
+        return seed;
+    }
 
     public Employee(String name, String surname) {
         this.surname = surname;
@@ -27,10 +33,9 @@ abstract public class Employee implements EmployeePosition {
 
     abstract public int getIncome();
 
-
     @Override
     public String toString() {
-        return  "[" + name + " " + surname + " " + "(" + getJobTitle() + ")" + "]" ;
+        return  name + ' ' + surname + "  (" + getJobTitle() + ")" ;
     }
 }
 

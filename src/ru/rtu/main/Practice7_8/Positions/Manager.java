@@ -5,15 +5,15 @@ import ru.rtu.main.Practice7_8.EmployeePosition;
 import java.util.Random;
 
 public class Manager extends Employee implements EmployeePosition {
-    private final Random rand = new Random();
-    private final int income = rand.nextInt(15000) + 115000;
+    Random rand = new Random(getSeed());
+    private double income = rand.nextInt(15000) + 115000;
 
     public Manager(String name, String surname) {
         super(name, surname);
     }
 
     public int getIncome() {
-        return income;
+        return (int) income;
     }
 
 
