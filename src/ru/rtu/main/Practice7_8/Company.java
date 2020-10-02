@@ -101,6 +101,8 @@ public class Company {
     public double[] getTopSalaryStaff(int count) {
         double[] topSalaryList = salaryList();
         double[] topXSalaryStaff = new double[count];
+        if ((count <= 0)||(count > employees.length)) return topXSalaryStaff;
+        else{
             for (int j = 0; j < topSalaryList.length; j++) {
                 for (int i = 0; i < topSalaryList.length - 1; i++) {
                     if (topSalaryList[i] < topSalaryList[i + 1]) {
@@ -112,22 +114,22 @@ public class Company {
         for (int i = 0; i < count; i++)
             topXSalaryStaff[i] = topSalaryList[i];
         }
-            return topXSalaryStaff;
+            return topXSalaryStaff;}
     }
     public double[] getLowestSalaryStaff(int count) {
         double[] sortedSalaryList = getTopSalaryStaff(employees.length);
         double[] topXLowestSalaryList = new double[count];
-        int j = 0;
-        for (int i = sortedSalaryList.length-1; i > sortedSalaryList.length - count-1; i--) {
-            if (sortedSalaryList[i] != 0.0) {
-                topXLowestSalaryList[j] = sortedSalaryList[i];
-                j++;
+        if ((count <= 0)||(count > employees.length)) return topXLowestSalaryList;
+        else {
+            int j = 0;
+            for (int i = sortedSalaryList.length - 1; i > sortedSalaryList.length - count - 1; i--) {
+                if (sortedSalaryList[i] != 0.0) {
+                    topXLowestSalaryList[j] = sortedSalaryList[i];
+                    j++;
+                } else count++;
             }
-            else count++;
-
+            return topXLowestSalaryList;
         }
-
-        return topXLowestSalaryList;
     }
 
 

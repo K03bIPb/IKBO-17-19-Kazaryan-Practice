@@ -49,6 +49,7 @@ public class main78 {
         toStringSalary((company.getLowestSalaryStaff(30)));
         company.calcIncome();
         System.out.println("Full company income: " + company.getFullIncome());
+        System.out.println("Full company income = 0 because all managers are gone after 50% fire");
     }
 
     private static void toStringSalary(double[] salary) {
