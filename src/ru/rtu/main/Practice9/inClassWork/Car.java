@@ -1,4 +1,4 @@
-package ru.rtu.main.Practice9;
+package ru.rtu.main.Practice9.inClassWork;
 
 public class Car {
     private final String brand;
