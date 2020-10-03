@@ -9,16 +9,26 @@ import java.util.Arrays;
 public class main78 {
     public static void main(String[] args) {
         Employee[] employees_to_hire = new Employee[280];
-        Employee employee_to_hire_top_manager = new TopManager("Ivan", "Ivanov");
-        Employee employee_to_hire_operator = new Operator("Denis", "Denisov");
-        Employee employee_to_hire_manager = new Manager("Petr", "Petrov");
+
+
+
 
         Company company = new Company(70000);
 
         for (int i = 0; i < employees_to_hire.length; i++) {
-            if (i < 180) employees_to_hire[i] = employee_to_hire_operator; //добавление операторов в список на найм
-            else if (i < 260) employees_to_hire[i] = employee_to_hire_manager; //добавление менеджеров в список на найм
-            else if (i < 270) employees_to_hire[i] = employee_to_hire_top_manager; //добавление топ менеджеров в список на найм
+
+            if (i < 180) {
+                Employee employee_to_hire_operator = new Operator("Denis", "Denisov");
+                employees_to_hire[i] = employee_to_hire_operator;
+            } //добавление операторов в список на найм
+            else if (i < 260) {
+                Employee employee_to_hire_manager = new Manager("Petr", "Petrov");
+                employees_to_hire[i] = employee_to_hire_manager;
+            } //добавление менеджеров в список на найм
+            else if (i < 270) {
+                Employee employee_to_hire_top_manager = new TopManager("Ivan", "Ivanov");
+                employees_to_hire[i] = employee_to_hire_top_manager;
+            } //добавление топ менеджеров в список на найм
         }
         company.hireAll(employees_to_hire); //найм сотрудников из списка
 
