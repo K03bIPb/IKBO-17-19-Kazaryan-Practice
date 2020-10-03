@@ -1,4 +1,4 @@
-package ru.rtu.main.Practice9_10;
+package ru.rtu.main.Practice9;
 
 public interface CarSelector {
     boolean needCars(Car car);
