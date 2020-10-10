@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ru.rtu.main.Practice10.Calc.CalcForm">
+  <grid id="27dc6" binding="mainCalcPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="386" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="fe752" binding="operationsPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="4">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="7d7eb" class="javax.swing.JButton" binding="plus">
+            <constraints/>
+            <properties>
+              <text value="Plus"/>
+            </properties>
+          </component>
+          <component id="714ea" class="javax.swing.JButton" binding="minus">
+            <constraints/>
+            <properties>
+              <text value="Minus"/>
+            </properties>
+          </component>
+          <component id="6d799" class="javax.swing.JButton" binding="multiply">
+            <constraints/>
+            <properties>
+              <text value="Multiply"/>
+            </properties>
+          </component>
+          <component id="b67b4" class="javax.swing.JButton" binding="divide">
+            <constraints/>
+            <properties>
+              <text value="Divide"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="a7c43" class="javax.swing.JTextField" binding="calcField">
+        <constraints border-constraint="North"/>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

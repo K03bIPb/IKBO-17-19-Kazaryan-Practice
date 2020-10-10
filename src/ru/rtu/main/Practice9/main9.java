@@ -1,7 +1,6 @@
 package ru.rtu.main.Practice9;
 
 
-import ru.rtu.main.Practice3.Hand;
 
 public class main9 {
     public static void main(String[] args) {
