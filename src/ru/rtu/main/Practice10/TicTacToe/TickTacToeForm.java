@@ -21,7 +21,6 @@ public class TickTacToeForm {
     private JButton button9;
     private boolean whichPlayer; //player 1 is cross player by default and his value is false
 
-
     public TickTacToeForm() {
         setWhichPlayer(false); // 0 - cross player by default
         clickAllButtonsActions();

@@ -9,7 +9,7 @@ public class Employee {
     private long phoneNumber;
     private double salary;
 
-    public Employee(String name, String surname, LocalDate birthDate, String regPlace, int phoneNumber, double salary) {
+    public Employee(String name, String surname, LocalDate birthDate, String regPlace, long phoneNumber, double salary) {
         this.name = name;
         this.surname = surname;
         this.birthDate = birthDate;
