@@ -1,4 +1,4 @@
-package ru.rtu.main.Practice10.Calc;
+package ru.rtu.main.Practice10;
 
 import javax.swing.*;
 

@@ -1,5 +1,7 @@
 package ru.rtu.main.Practice10.Calc;
 
+import ru.rtu.main.Practice10.buttonInterpreter;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -11,18 +13,24 @@ public class CalcForm {
     private JPanel operationsPanel;
     private JPanel mainCalcPanel;
     private JTextField calcField;
+    private JButton modDivide;
+    private JTextArea consoleArea;
     double a;
     double b;
-    boolean check;
+    boolean newCalc = Boolean.FALSE;
+
 
     public JPanel getMainCalcPanel() {
         return mainCalcPanel;
 
     }
 
+    public void printIntro(){
+        consoleArea.setText("K03bIPb's calc:\n Just a small calc. \n Print first value then press enter then press second then press enter again.\n If you want to calc anything else press enter again");
+    }
+
     CalcForm() {
-
-
+        printIntro();
         calcField.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -35,15 +43,19 @@ public class CalcForm {
                     try {
                         a = Double.parseDouble(calcField.getText());
                     } catch (Exception error) {
-                        System.out.println("Only numbers are allowed in calc!");
+                        consoleArea.setText(consoleArea.getText() + "\nOnly numbers are allowed in calc!");
                     }
                     calcField.setText("");
-                } else if ((e.getKeyCode() == KeyEvent.VK_ENTER) && (calcField.getText() != null)) {
+                } else if ((e.getKeyCode() == KeyEvent.VK_ENTER) && (calcField.getText() != null) && (b == 0)) {
                     try {
                         b = Double.parseDouble(calcField.getText());
                     } catch (Exception error) {
-                        System.out.println("Only numbers are allowed in calc!");
+                        consoleArea.setText(consoleArea.getText() + "\nOnly numbers are allowed in calc!");
                     }
+                    calcField.setText("");
+                } else if ((e.getKeyCode() == KeyEvent.VK_ENTER) && (newCalc)){
+                    a = 0;
+                    b = 0;
                     calcField.setText("");
                 }
             }
@@ -51,20 +63,29 @@ public class CalcForm {
             public void keyReleased(KeyEvent e) {
 
             }
+
         });
 
 
         clickButton(plus, () -> {
             calcField.setText(String.valueOf(a + b));
+            newCalc = true;
         });
         clickButton(minus, () -> {
             calcField.setText(String.valueOf(a - b));
+            newCalc = true;
         });
         clickButton(multiply, () -> {
             calcField.setText(String.valueOf(a * b));
+            newCalc = true;
         });
         clickButton(divide, () -> {
             calcField.setText(String.valueOf(a / b));
+            newCalc = true;
+        });
+        clickButton(modDivide, () -> {
+            calcField.setText(String.valueOf(a % b));
+            newCalc = true;
         });
 
 

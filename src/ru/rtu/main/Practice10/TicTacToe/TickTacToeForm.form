@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ru.rtu.main.Practice10.TicTacToe.TickTacToeForm">
+  <grid id="27dc6" binding="mainTickTacToePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="152bc" binding="panelNorth" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="1da2f" class="javax.swing.JButton" binding="button1" default-binding="true">
+            <constraints/>
+            <properties>
+              <font size="72"/>
+              <preferredSize width="100" height="100"/>
+              <text value=""/>
+              <toolTipText value=""/>
+            </properties>
+          </component>
+          <component id="f0309" class="javax.swing.JButton" binding="button2" default-binding="true">
+            <constraints/>
+            <properties>
+              <font size="72"/>
+              <preferredSize width="100" height="100"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="e22be" class="javax.swing.JButton" binding="button3" default-binding="true">
+            <constraints/>
+            <properties>
+              <font size="72"/>
+              <preferredSize width="100" height="100"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="a8e2" binding="panelCenter" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="41e30" class="javax.swing.JButton" binding="button4" default-binding="true">
+            <constraints/>
+            <properties>
+              <font size="72"/>
+              <preferredSize width="100" height="100"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="4aec6" class="javax.swing.JButton" binding="button5" default-binding="true">
+            <constraints/>
+            <properties>
+              <font size="72"/>
+              <preferredSize width="100" height="100"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="74d7" class="javax.swing.JButton" binding="button6" default-binding="true">
+            <constraints/>
+            <properties>
+              <font size="72"/>
+              <preferredSize width="100" height="100"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="b01f8" binding="panelSouth" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="55324" class="javax.swing.JButton" binding="button7" default-binding="true">
+            <constraints/>
+            <properties>
+              <font size="72"/>
+              <preferredSize width="100" height="100"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="eb9a9" class="javax.swing.JButton" binding="button8" default-binding="true">
+            <constraints/>
+            <properties>
+              <font size="72"/>
+              <preferredSize width="100" height="100"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="38faa" class="javax.swing.JButton" binding="button9" default-binding="true">
+            <constraints/>
+            <properties>
+              <font size="72"/>
+              <preferredSize width="100" height="100"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

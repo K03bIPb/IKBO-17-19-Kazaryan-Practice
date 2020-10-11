@@ -2,13 +2,13 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ru.rtu.main.Practice10.Calc.CalcForm">
   <grid id="27dc6" binding="mainCalcPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="386" height="400"/>
+      <xy x="20" y="20" width="442" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
       <grid id="fe752" binding="operationsPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="4">
-        <constraints border-constraint="Center"/>
+        <constraints border-constraint="South"/>
         <properties/>
         <border type="none"/>
         <children>
@@ -36,12 +36,29 @@
               <text value="Divide"/>
             </properties>
           </component>
+          <component id="6de0d" class="javax.swing.JButton" binding="modDivide">
+            <constraints/>
+            <properties>
+              <text value="Mod divide"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <component id="a7c43" class="javax.swing.JTextField" binding="calcField">
         <constraints border-constraint="North"/>
         <properties>
           <text value=""/>
+        </properties>
+      </component>
+      <component id="5d2cd" class="javax.swing.JTextArea" binding="consoleArea">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <background color="-15723958"/>
+          <enabled value="false"/>
+          <font size="17"/>
+          <preferredSize width="5" height="17"/>
+          <selectedTextColor color="-4521885"/>
+          <selectionColor color="-5308394"/>
         </properties>
       </component>
     </children>

@@ -7,33 +7,17 @@ public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
+        int res = 0;
         if (checkN(N)) {
-            int ways = 0;
-            int Ncopy = N;
-            for (int i = 0; i < N; i++) {
-
-                for (int j = 0; j < N; j++) {
-                    int coin1issued = 0;
-                    int coin3issued = 0;
-                    int coin5issued = 0;
-                    while (Ncopy > 5) {
-                        Ncopy =- 5;
-                        coin5issued++;
-                    }
-                    while (Ncopy > 3) {
-                        Ncopy =- 3;
-                        coin3issued++;
-                    }
-                    while (Ncopy > 1) {
-                        Ncopy =- 1;
-                        coin1issued++;
-                    }
-                    if (Ncopy == 0) ways++;
-                }
-
+            for(int z=0;z<=1+N/2;++z) {
+                res += 1 + (100000 - z * 5) / 2;
+                System.out.println(res + "\n");
             }
         }
-    }
+        System.out.println(res + "\n");
+        }
+
+
     public static boolean checkN ( int N){
         if ((N < 1) || (N > 10_000)) {
             System.out.println("Incorrect N!");
