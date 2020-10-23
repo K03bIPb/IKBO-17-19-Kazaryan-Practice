@@ -3,7 +3,6 @@ package ru.rtu.main.Practice10.TicTacToe;
 import ru.rtu.main.Practice10.buttonInterpreter;
 
 import javax.swing.*;
-import java.awt.event.*;
 
 public class TickTacToeForm {
     private JPanel mainTickTacToePanel;
