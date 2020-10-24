@@ -26,7 +26,7 @@ public class CalcForm {
     }
 
     public void printIntro(){
-        consoleArea.setText("K03bIPb's calc:\n Just a small calc. \n Print first value then press enter then press second then press enter again.\n If you want to calc anything else press enter again");
+        consoleArea.setText("K03bIPb's calc:\n Just a small calc. \n Print first value then press enter then press second then press enter again.\n If you want to calc anything else press enter again to reset");
     }
 
     CalcForm() {
@@ -42,6 +42,7 @@ public class CalcForm {
                 if ((e.getKeyCode() == KeyEvent.VK_ENTER) && (calcField.getText() != null) && (a == 0)) {
                     try {
                         a = Double.parseDouble(calcField.getText());
+                        consoleArea.setText(consoleArea.getText() + "\n" + calcField.getText());
                     } catch (Exception error) {
                         consoleArea.setText(consoleArea.getText() + "\nOnly numbers are allowed in calc!");
                     }
@@ -49,6 +50,7 @@ public class CalcForm {
                 } else if ((e.getKeyCode() == KeyEvent.VK_ENTER) && (calcField.getText() != null) && (b == 0)) {
                     try {
                         b = Double.parseDouble(calcField.getText());
+                        consoleArea.setText(consoleArea.getText() + "\n" + calcField.getText());
                     } catch (Exception error) {
                         consoleArea.setText(consoleArea.getText() + "\nOnly numbers are allowed in calc!");
                     }
@@ -70,22 +72,32 @@ public class CalcForm {
         clickButton(plus, () -> {
             calcField.setText(String.valueOf(a + b));
             newCalc = true;
+            consoleArea.setText(consoleArea.getText() + "\n" + "+");
+            consoleArea.setText(consoleArea.getText() + "\n" + calcField.getText() +  "\n");
         });
         clickButton(minus, () -> {
             calcField.setText(String.valueOf(a - b));
             newCalc = true;
+            consoleArea.setText(consoleArea.getText() + "\n" + "-");
+            consoleArea.setText(consoleArea.getText() + "\n" + calcField.getText() +  "\n");
         });
         clickButton(multiply, () -> {
             calcField.setText(String.valueOf(a * b));
             newCalc = true;
+            consoleArea.setText(consoleArea.getText() + "\n" + "*");
+            consoleArea.setText(consoleArea.getText() + "\n" + calcField.getText() +  "\n");
         });
         clickButton(divide, () -> {
             calcField.setText(String.valueOf(a / b));
             newCalc = true;
+            consoleArea.setText(consoleArea.getText() + "\n" + "/");
+            consoleArea.setText(consoleArea.getText() + "\n" + calcField.getText() +  "\n");
         });
         clickButton(modDivide, () -> {
             calcField.setText(String.valueOf(a % b));
             newCalc = true;
+            consoleArea.setText(consoleArea.getText() + "\n" + "%");
+            consoleArea.setText(consoleArea.getText() + "\n" + calcField.getText() +  "\n");
         });
 
 

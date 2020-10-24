@@ -263,7 +263,7 @@ public class TickTacToeForm {
                     break;
                 case 8:
                     if (button8.getText().equals("")) {
-                        button9.setText("0");
+                        button8.setText("0");
                         done = true;
                     }
                     else a = (int) ( (Math.random() * (9 - 1 + 1)) + 1);
