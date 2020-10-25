@@ -24,6 +24,9 @@ public class Task2 {
                     }
                     else System.out.println("Wrong e-mail format");
                 }
+                if (input.equals("STOP")){
+                    break;
+                }
             }
             else System.out.println("There can't be more than two arguments!");
 
