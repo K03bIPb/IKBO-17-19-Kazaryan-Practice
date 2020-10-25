@@ -59,11 +59,6 @@ public class Task3 {
         }
     }
 
-    private static void printMap(Map<String, String> map) {
-        for (String key : map.keySet()) {
-            System.out.println("Имя: " + key + ", телефон: " + map.get(key));
-        }
-    }
 
     private static void printSpecifiedValue(String key, Map<String, String> map) {
         System.out.println("Имя: " + key + ", телефон: " + map.get(key));
@@ -97,8 +92,7 @@ public class Task3 {
                 format1 = true;
             else if ((arr[0] == '9') && (input.length() == 10))
                 format2 = true;
-            if (format1 || format2) return true;
-            else return false;
+            return format1 || format2;
         } catch (NumberFormatException exception) {
             return false;
         }
@@ -136,20 +130,18 @@ public class Task3 {
         input = input.replaceAll("\\(", "");
         input = input.replaceAll(" ", "");
         char[] arr = input.toCharArray();
-        boolean format1 = false;
-        boolean format2 = false;
-        if (((arr[0] == '7') || (arr[0] == '8')) && (input.length() == 11))
-            format1 = true;
-        else if ((arr[0] == '9') && (input.length() == 10))
-            format2 = true;
+        boolean format;
+        if (((arr[0] == '7') || (arr[0] == '8')) && (input.length() == 11)) {
+            format = true;
+        }
+        else if ((arr[0] == '9') && (input.length() == 10)) {
+            format = false;
+        }
         else return "Неверный формат номера!";
 
-        if (format1) {
+        if (format) {
             return ("+" + " " + 7 + " " + "(" + arr[1] + arr[2] + arr[3] + ")" + " " + arr[4] + arr[5] + arr[6] + "-" + arr[7] + arr[8] + "-" + arr[9] + arr[10]);
         }
-        if (format2) {
-            return ("+" + " " + 7 + " " + "(" + arr[0] + arr[1] + arr[2] + ")" + " " + arr[3] + arr[4] + arr[5] + "-" + arr[6] + arr[7] + "-" + arr[8] + arr[9]);
-        }
-        return "Неверный формат";
+        else return ("+" + " " + 7 + " " + "(" + arr[0] + arr[1] + arr[2] + ")" + " " + arr[3] + arr[4] + arr[5] + "-" + arr[6] + arr[7] + "-" + arr[8] + arr[9]);
     }
 }
