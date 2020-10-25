@@ -8,7 +8,7 @@ public class Task2 {
         TreeSet<String> treeSet = new TreeSet<>();
         Scanner scanner = new Scanner(System.in);
 
-        while(true){
+        while (true) {
             String input = scanner.nextLine();
             String[] split = input.split(" ");
             if (split.length <= 2) {
@@ -16,17 +16,17 @@ public class Task2 {
                     System.out.println(treeSet);
                 }
                 if (split[0].equals("ADD")) {
-                    if (split[1].contains("@")){
-                        if (split[1].contains(".")){
-                        String[] split2 = split[1].split(".");
-                        String address = "";
-                        for (int i = 1; i < split.length; i++)
-                            address = address + split[i];
-                        treeSet.add(address);
+                    if (split[1].contains("@") && split[1].contains(".")) {
+                        String[] split2 = split[1].split("@");
+                        if (split2[1].contains("."))
+                            treeSet.add(split[1]);
+                        else System.out.println("Wrong e-mail format");
                     }
+                    else System.out.println("Wrong e-mail format");
                 }
             }
-        }
+            else System.out.println("There can't be more than two arguments!");
 
+        }
     }
 }
