@@ -17,7 +17,12 @@ public class Task1 {
                     for (int i = 2; i < split.length; i++) {
                         task = task + " " + split[i];
                     }
-                    list.add(a, task);
+                    try {
+                        list.add(a, task);
+                    }
+                    catch(IndexOutOfBoundsException exception){
+                        list.add(task);
+                    }
                 } catch (NumberFormatException exception) {
                     String task = "";
                     for (int i = 1; i < split.length; i++) {
@@ -45,7 +50,12 @@ public class Task1 {
                     for (int i = 2; i < split.length; i++) {
                         task = task + " " + split[i];
                     }
-                    list.set(c, task);
+                    try {
+                        list.set(c, task);
+                    }
+                    catch(IndexOutOfBoundsException exception){
+                        System.out.println("This index is empty!");
+                    }
                 } catch (NumberFormatException exception) {
                     System.out.println("W");
                 }
