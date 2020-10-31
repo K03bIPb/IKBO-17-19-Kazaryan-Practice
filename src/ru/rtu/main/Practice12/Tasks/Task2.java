@@ -18,7 +18,7 @@ public class Task2 {
                 if (split[0].equals("ADD")) {
                     if (split[1].contains("@") && split[1].contains(".")) {
                         String[] split2 = split[1].split("@");
-                        if (split2[1].contains("."))
+                        if ((split2[1].contains(".") && (split2[1].lastIndexOf(".") == split2.length-1)))
                             treeSet.add(split[1]);
                         else System.out.println("Wrong e-mail format");
                     }
