@@ -38,6 +38,16 @@ public class main13 {
         end = System.nanoTime() - start;
         System.out.println("Time to search using HashSet tables" + isSearchSucceed + ": " + end + " nanoseconds");
         isSearchSucceed = "";
+
+        TreeSet<String> treeSet = new TreeSet<>(carsNumbers);
+        start = System.nanoTime();
+        if (!treeSet.contains(input)) {
+            isSearchSucceed = "Search was not successful!";
+        }
+        else isSearchSucceed = "Search was successful!";
+        end = System.nanoTime() - start;
+        System.out.println("Time to search using TreeSet tables" + isSearchSucceed + ": " + end + " nanoseconds");
+        isSearchSucceed = "";
     }
     public static ArrayList<String> generateCarNumbers(){
         ArrayList<String> carsNumbers = new ArrayList<>();
