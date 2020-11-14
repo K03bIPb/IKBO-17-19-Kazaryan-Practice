@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Loader {
     public static void main(String[] args) {
-    parseHTML();
+        parseHTML();
     }
     public static void parseTable(){
         try{
