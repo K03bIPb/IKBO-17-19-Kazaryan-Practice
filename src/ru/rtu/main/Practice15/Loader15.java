@@ -1,4 +1,4 @@
-package ru.rtu.main.Practice14;
+package ru.rtu.main.Practice15;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -8,9 +8,16 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class Loader {
+public class Loader15 {
     public static void main(String[] args) {
         parseHTML();
+    }
+    public static void loggingThings(){
+        try{
+            parseHTML();
+        }catch (Exception exception){
+
+        }
     }
     public static void parseTable(){
         try{
