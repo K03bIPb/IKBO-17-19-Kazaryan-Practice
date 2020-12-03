@@ -27,7 +27,6 @@ public class Loader15 {
             ex.printStackTrace();
         }
     }
-
     public static void parseHTML() {
         try {
             Document html = Jsoup.connect("https://yandex.ru/").get();
@@ -39,7 +38,6 @@ public class Loader15 {
             ex.printStackTrace();
         }
     }
-
     public static void parse2() {
         try {
             String pathToCsv = "src/ru/rtu/main/Practice15/Data/movementList.csv";
