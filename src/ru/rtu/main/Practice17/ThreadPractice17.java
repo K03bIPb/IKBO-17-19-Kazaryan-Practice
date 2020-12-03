@@ -1,15 +1,15 @@
-package ru.rtu.main.Practice16;
+package ru.rtu.main.Practice17;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-public class ThreadPractice16 implements Runnable {
+public class ThreadPractice17 implements Runnable {
     private final long start;
     private final File[] files;
     private final String dstFolder;
 
-    public ThreadPractice16(File[] files, String dstFolder, long start) {
+    public ThreadPractice17(File[] files, String dstFolder, long start) {
         this.start = start;
         this.dstFolder = dstFolder;
         this.files = files;

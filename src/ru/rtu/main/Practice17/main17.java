@@ -1,13 +1,13 @@
-package ru.rtu.main.Practice16;
+package ru.rtu.main.Practice17;
 
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class main16 {
+public class main17 {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        String practiceDataFolder = "src/ru/rtu/main/Practice16/Data/";
+        String practiceDataFolder = "src/ru/rtu/main/Practice17/Data/";
         String srcFolder = "images";
         String dstFolder = "dst";
         int cores = Runtime.getRuntime().availableProcessors();
@@ -28,20 +28,9 @@ public class main16 {
                 cutList[i] = tempFiles;
             }
             for (File[] list : cutList) {
-                Thread thread = new Thread(new ThreadPractice16(list, practiceDataFolder + dstFolder, start));
+                Thread thread = new Thread(new ThreadPractice17(list, practiceDataFolder + dstFolder, start));
                 thread.start();
             }
-            /*int middle = files.length/2;
-            File[] files1 = new File[middle];
-            File[] files2 = new File[files.length - middle];
-
-            System.arraycopy(files, 0, files1, 0, files1.length);
-            Thread resize1 = new Thread(new ThreadPractice16(files1, practiceDataFolder + dstFolder, start));
-            resize1.start();
-
-            System.arraycopy(files, middle, files2, 0, files2.length);
-            Thread resize2 = new Thread(new ThreadPractice16(files2, practiceDataFolder + dstFolder, start));
-            resize2.start();*/
         } catch (Exception ex) {
             ex.printStackTrace();
         }
