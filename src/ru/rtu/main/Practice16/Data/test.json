@@ -1,0 +1,19 @@
+{
+  "firstName": "Ivan",
+  "surname": "Ivanov",
+  "age": 24,
+  "address": {
+      "city": "Moscow",
+    "street": "Baker"
+  },
+  "phoneNumbers": [
+    {
+      "type": "mobile",
+      "number" : "89686592309"
+    },
+    {
+      "type": "home",
+      "number": "89096501303"
+    }
+  ]
+}
